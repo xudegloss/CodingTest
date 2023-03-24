@@ -1,4 +1,4 @@
-# 언패킹 + sum 함수 이용하기
+# swap + sum 함수 이용하기
 def solution(a, b):
     if a>b:
         a,b = b,a
