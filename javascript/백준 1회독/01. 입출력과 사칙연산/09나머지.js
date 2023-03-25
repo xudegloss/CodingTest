@@ -6,13 +6,13 @@ let input = fs
   .toString()
   .split(" ");
 
-// console.log(input); // ["7", "3"]
+// console.log(input);
 
 let A = parseInt(input[0]);
 let B = parseInt(input[1]);
+let C = parseInt(input[2]);
 
-console.log(A + B);
-console.log(A - B);
-console.log(A * B);
-console.log(parseInt(A / B));
-console.log(A % B);
+console.log((A + B) % C);
+console.log(((A % C) + (B % C)) % C);
+console.log((A * B) % C);
+console.log(((A % C) * (B % C)) % C);
