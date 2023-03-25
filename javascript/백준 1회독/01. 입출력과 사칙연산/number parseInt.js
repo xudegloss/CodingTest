@@ -11,6 +11,6 @@ console.log(Number(c)); // 2023
 console.log(parseInt(c)); // 2023
 
 let d = "123.45678";
-console.log(Number(d));
-console.log(parseInt(d));
-console.log(parseFloat(d));
+console.log(Number(d)); // 123.45678
+console.log(parseInt(d)); // 123
+console.log(parseFloat(d)); // 123.45678
