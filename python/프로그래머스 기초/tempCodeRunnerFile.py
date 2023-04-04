@@ -1,2 +1,2 @@
- # if stack[-1]==stack.index(char):
-            #     answer.append("hi")
+answer = combi * math.factorial(pick_num)
+    return answer
