@@ -1,2 +1,1 @@
-answer = combi * math.factorial(pick_num)
-    return answer
+_list.remove(j)

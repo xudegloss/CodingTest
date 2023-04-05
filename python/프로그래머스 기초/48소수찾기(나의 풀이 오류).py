@@ -36,8 +36,7 @@ def solution(n):
             count+=1
     return count
 
-## 에라토스테네스 체를 이용하여 구하면 제대로 돌아간다.
-# 알바 끝나고 살펴보기.
+## 잘 돌아간다... 
 
 def solution(n):
     num=set(range(2,n+1))
@@ -46,3 +45,35 @@ def solution(n):
         if i in num:
             num-=set(range(2*i,n+1,i))
     return len(num)
+
+## 에라토스테네스 체를 이용하여 구하면 제대로 돌아간다.
+# 1. 1을 제거한다.
+# 2. 2을 선택하고, 2의 배수를 모두 제거한다.
+# 3. 3을 선택하고, 3의 배수를 모두 제거한다.
+# 4. 반복...
+
+## 시간 초과...
+ 
+def solution(n):
+    _list=[]
+    for num in range(2, n+1):
+        _list.append(num)
+
+    m=int(n**0.5)
+    for i in range(2, m+1):
+        for j in range(2*i, n+1, i):
+            if j in _list:
+                _list.remove(j)
+    return len(_list)
+
+## chat GPT가 최적화해줌...
+
+def solution(n):
+    primes = [True] * (n+1)
+    primes[0] = primes[1] = False
+
+    for i in range(2, int(n**0.5)+1):
+        if primes[i]:
+            primes[i*i:n+1:i] = [False] * len(primes[i*i:n+1:i])
+
+    return sum(primes)
