@@ -1,4 +1,5 @@
-// 이해 안됨...
+// 이해 완료...
+// 파이썬 판다스의 인덱싱 같은 개념 : substring(start index, last index)
 
 const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "/input.txt";
