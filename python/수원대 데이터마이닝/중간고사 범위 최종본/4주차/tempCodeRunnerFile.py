@@ -1,3 +1,2 @@
-print(solution([2, 1, 3, 2], 1))
-# print(solution([2, 1, 3, 2], 3))
-# print(solution([1, 1, 9, 1, 1, 1], 0))
+print(remove_dups("accab"))
+print(remove_dups("baccaaac"))

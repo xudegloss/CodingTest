@@ -1,0 +1,14 @@
+N=3
+subset=[0]*3
+
+def DFS_subset(level):
+    if level >= N:
+        print(subset)
+        return
+    else:
+        subset[level]=0
+        DFS_subset(level+1)
+        subset[level]=1
+        DFS_subset(level+1)
+
+print(DFS_subset(0))
