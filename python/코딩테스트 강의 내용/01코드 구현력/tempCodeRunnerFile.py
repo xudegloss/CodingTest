@@ -15,19 +15,6 @@ for i in range(0, N):
             new_list.append(arr[i]+arr[j]+arr[z])
 
 new_list=list(set(new_list))
-new_list.sort(reverse=True)
+new_list.sort()
+print(new_list)
 print(new_list[K-1])
-
-
-"""
-## 중복을 제거하기 : 집합 이용하기
-res=set()
-for i in range(0, N):
-    for j in range(i+1, N):
-        for m in range(j+1, N):
-            res.add(arr[i]+arr[j]+arr[m]) # set은 append 대신에 add 이용하기
-
-res=list(res)
-res.sort(reverse=True)
-print(res[K-1])
-"""
