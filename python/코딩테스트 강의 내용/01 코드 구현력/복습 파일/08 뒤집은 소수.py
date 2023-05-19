@@ -11,10 +11,11 @@ def reverse(x):
     return int(str(x)[::-1])
 
 def isPrime(x):
+    ### x가 1인 조건 빼먹지 않고 넣어주기.
+    if x==1:
+        return False
+    
     for divide in range(2, (x//2)+1):
-        ### x가 1인 조건 빼먹지 않고 넣어주기.
-        if x==1:
-            return False
         if x%divide==0:
             return False
     else:
